@@ -1,0 +1,65 @@
+================================================================
+== Vitis HLS Report for 'fir_filter'
+================================================================
+* Date:           Thu Sep 10 2026
+
+* Version:        (sample/illustrative report)
+* Project:        fir_filter_prj
+* Solution:       solution1
+* Product family: sample
+* Target device:  sample-xc7z020
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing:
+    * Summary:
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  10.00  |   8.34   |    1.25    |
+    +--------+---------+----------+------------+
+
++ Latency:
+    * Summary:
+    +-----+-----+-----+-----+---------+
+    |  Latency (cycles)     |  Latency (ns) |
+    +-----+-----+-----+-----+---------+
+    | min |  81 |  max | 81  |  675.54 |
+    +-----+-----+-----+-----+---------+
+
+    * Loop 'fir_loop':
+        - Trip count: 64
+        - Pipelined: no
+        - Initiation Interval (achieved): 1
+        - Loop latency: 80 cycles
+
+================================================================
+== Utilization Estimates
+================================================================
++---------------------+---------+-------+--------+--------+-----+
+|         Name        | BRAM_18K|  DSP  |   FF   |  LUT   | URAM|
++---------------------+---------+-------+--------+--------+-----+
+|DSP                  |        -|      3|       -|       -|    -|
+|Expression            |        -|      -|      12|      168|    -|
+|FIFO                  |        -|      -|       -|       -|    -|
+|Instance               |        -|      -|      45|      210|    -|
+|Memory                 |        4|      -|       -|       -|    -|
+|Multiplexer            |        -|      -|       -|       98|    -|
+|Register                |        -|      -|      62|       -|    -|
++---------------------+---------+-------+--------+--------+-----+
+|Total                   |        4|      3|     119|      476|    -|
++---------------------+---------+-------+--------+--------+-----+
+|Available                |      280|    220|  106400|   53200|    0|
++---------------------+---------+-------+--------+--------+-----+
+|Utilization (%)         |        1|      1|       0|       0|    0|
++---------------------+---------+-------+--------+--------+-----+
+
+================================================================
+== Notes
+================================================================
+The 'fir_loop' loop was not pipelined in this run. Applying a
+PIPELINE directive to this loop would reduce the initiation
+interval, at the cost of additional DSP and FF usage from
+resource duplication needed to issue a new iteration every
+cycle.

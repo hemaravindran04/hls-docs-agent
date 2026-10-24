@@ -1,0 +1,17 @@
+[
+  {"q": "What is high-level synthesis?", "expected": "hls_basics.md", "type": "direct"},
+  {"q": "What does loop pipelining do?", "expected": "hls_basics.md", "type": "direct"},
+  {"q": "What is resource sharing and binding?", "expected": "hls_basics.md", "type": "direct"},
+  {"q": "What are pragmas and directives used for?", "expected": "hls_basics.md", "type": "direct"},
+  {"q": "How does array partitioning help?", "expected": "hls_basics.md", "type": "direct"},
+  {"q": "What is C/RTL co-simulation?", "expected": "hls_verification.md", "type": "direct"},
+  {"q": "What causes a mismatch between C and RTL results?", "expected": "hls_verification.md", "type": "direct"},
+  {"q": "What regression tests do HLS teams run on each commit?", "expected": "hls_verification.md", "type": "direct"},
+  {"q": "Why is retrieval useful for an LLM agent?", "expected": "ai_agents_for_eda.md", "type": "direct"},
+  {"q": "What is a skill or slash command for an agent?", "expected": "ai_agents_for_eda.md", "type": "direct"},
+  {"q": "What tools might an EDA agent have?", "expected": "ai_agents_for_eda.md", "type": "direct"},
+  {"q": "How do I make my design run faster by starting the next iteration early?", "expected": "hls_basics.md", "type": "paraphrase"},
+  {"q": "Why does my hardware output differ from my software output?", "expected": "hls_verification.md", "type": "paraphrase"},
+  {"q": "How can a chatbot avoid making things up about a tool?", "expected": "ai_agents_for_eda.md", "type": "paraphrase"},
+  {"q": "How do I use fewer multipliers?", "expected": "hls_basics.md", "type": "paraphrase"}
+]
